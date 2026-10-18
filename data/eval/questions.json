@@ -1,0 +1,6 @@
+[
+  {"lesson":"Fractions","question":"What does a denominator tell us?","expected_section":"Equal parts","kind":"relevant"},
+  {"lesson":"Photosynthesis","question":"How do leaves use light?","expected_section":"What plants need","kind":"relevant"},
+  {"lesson":"Fractions","question":"Tell me about football.","expected_section":null,"kind":"unrelated"},
+  {"lesson":"Photosynthesis","question":"Why is the sky blue?","expected_section":null,"kind":"insufficient-evidence"}
+]
