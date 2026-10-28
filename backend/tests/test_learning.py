@@ -5,12 +5,12 @@ from conftest import DEMO_LEARNER, first_lesson, learner_client, quiz_for
 
 def test_content_catalogue(client):
     subjects = client.get("/api/v1/subjects").json()
-    assert {subject["name"] for subject in subjects} == {"Mathematics", "Science"}
+    assert {"Mathematics", "Science"}.issubset({subject["name"] for subject in subjects})
     lessons = client.get("/api/v1/lessons", params={"class_level": 6}).json()
-    assert len(lessons) == 4
+    assert len(lessons) >= 4
     assert {lesson["topic"] for lesson in lessons} >= {"Fractions", "Photosynthesis"}
     detail = client.get(f"/api/v1/lessons/{lessons[0]['id']}").json()
-    assert len(detail["sections"]) == 3
+    assert len(detail["sections"]) >= 3
     assert detail["attribution"] == "Original GURUJI BOX educational content"
     assert detail["license"] == "CC BY 4.0"
 

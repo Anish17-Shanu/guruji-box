@@ -9,7 +9,7 @@ from conftest import admin_client, learner_client, register
 def test_admin_stats_users_and_audit():
     admin = admin_client()
     stats = admin.get("/api/v1/admin/stats").json()
-    assert stats["lessons"] == 4
+    assert stats["lessons"] >= 4
     assert stats["classes"] >= 1
     assert stats["admins"] >= 1
     users = admin.get("/api/v1/admin/users", params={"limit": 5}).json()

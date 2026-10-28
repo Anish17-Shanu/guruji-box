@@ -94,7 +94,7 @@ def admin_client():
 def first_lesson(client: TestClient) -> dict:
     lessons = client.get("/api/v1/lessons", params={"class_level": 6}).json()
     assert lessons
-    return lessons[0]
+    return next((item for item in lessons if item["slug"] == "fractions"), lessons[0])
 
 
 def quiz_for(client: TestClient, lesson_id: int) -> dict:

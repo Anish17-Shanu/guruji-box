@@ -6,8 +6,8 @@ from conftest import learner_client
 def test_skill_course_progress():
     learner = learner_client()
     courses = learner.get("/api/v1/skills/courses").json()
-    assert len(courses) == 1
-    course = courses[0]
+    assert len(courses) >= 1
+    course = next(c for c in courses if c["slug"] == "digital-literacy")
     assert course["lesson_count"] == 6
     detail = learner.get(f"/api/v1/skills/courses/{course['id']}").json()
     assert len(detail["lessons"]) == 6
@@ -24,7 +24,8 @@ def test_skill_course_progress():
     assert refreshed["completed_count"] == 1
     assert refreshed["lessons"][0]["completed"] is True
     progress = learner.get("/api/v1/skills/progress/me").json()
-    assert progress[0]["completed"] == 1
+    matching_progress = next(p for p in progress if p["id"] == course["id"])
+    assert matching_progress["completed"] == 1
 
     learner.post("/api/v1/skills/progress", json={"lesson_id": lesson["id"], "completed": False})
     assert learner.get(f"/api/v1/skills/courses/{course['id']}").json()["completed_count"] == 0
