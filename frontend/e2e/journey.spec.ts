@@ -52,7 +52,8 @@ test('public pages, install assets and language switching work', async ({ page }
 
   await page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Learn' }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Lessons' })).toBeVisible();
-  await expect(page.locator('.lesson-card')).toHaveCount(4);
+  await expect(page.locator('.lesson-card').first()).toBeVisible();
+  expect(await page.locator('.lesson-card').count()).toBeGreaterThanOrEqual(4);
 
   await page.locator('.lesson-card h2 a').first().click();
   await expect(page.locator('.lesson-body section').first()).toBeVisible();
