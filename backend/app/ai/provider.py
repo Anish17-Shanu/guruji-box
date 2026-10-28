@@ -110,26 +110,39 @@ class GeminiProvider:
             raise last_error
         raise ProviderError(f"The AI service is temporarily unavailable: {last_error or 'Please retry.'}")
 
-    def answer(self, question: str, passages: list[dict]) -> GroundedReply:
-        context = "\n\n".join(f"[{item['id']}] {item['text']}" for item in passages)
+    def answer(
+        self,
+        question: str,
+        passages: list[dict],
+        lesson_title: str = "",
+        lesson_topic: str = "",
+        lesson_summary: str = "",
+    ) -> GroundedReply:
+        context = "\n\n".join(
+            f"[{item['id']}] {item.get('heading', '')}: {item['text']}" for item in passages
+        )
         prompt = (
-            "You are a helpful and supportive educational tutor for learners. "
-            "Answer ONLY using the numbered lesson passages below. Use simple, clear, and encouraging language. "
-            "If the question or passage is in Hindi, reply in clear, natural Hindi. "
-            "Keep the answer under 120 words. If the passages do not contain enough evidence, "
-            "say that the lesson does not cover it and set passage_ids to []. "
-            "Return JSON matching the schema: answer and passage_ids (list of passage id numbers used).\n\n"
-            f"Passages:\n{context}\n\nQuestion: {question}"
+            "You are Guruji, a warm, supportive and encouraging educational tutor for school learners in India.\n"
+            f"The student is currently learning the lesson: '{lesson_title or 'Lesson'}' (Topic: {lesson_topic or 'General'}).\n"
+            f"Lesson Summary: {lesson_summary}\n\n"
+            "Lesson Sections:\n"
+            f"{context}\n\n"
+            f"Student message: {question}\n\n"
+            "Instructions:\n"
+            "1. Language: If the student writes in Hindi or the lesson is in Hindi, reply in warm, clear, natural Hindi. Otherwise reply in simple, clear English.\n"
+            "2. Greetings: If the student greets you (e.g. 'hi', 'hello', 'namaste', 'pranam', 'hey'), greet them warmly, introduce the lesson topic, and mention 1-2 interesting things they will learn from the sections above. Set passage_ids to [id of the first section].\n"
+            "3. Explanations & Summaries: If the student asks to explain, summarize, or give an overview of the lesson ('explain this', 'summarize', 'kya hai ye', etc.), explain the main ideas simply in 2-3 friendly sentences based on the sections above. Set passage_ids to the ids of the sections used.\n"
+            "4. Lesson Questions: If the student asks a question about the lesson, answer it encouragingly, keeping it concise (under 100 words), grounded strictly in the lesson sections. Set passage_ids to the ids used.\n"
+            "5. Completely Unrelated Questions: ONLY if the student asks about something completely outside this lesson (e.g., cricket/movies/football in a math lesson), politely state that this lesson is about the lesson topic and encourage them to ask about one of the lesson's topics. Set passage_ids to [].\n\n"
+            "Return valid JSON matching the schema: answer (string) and passage_ids (list of integer passage ids used, or [] if completely unrelated)."
         )
         reply = self._generate(prompt, GroundedReply, self.settings.tutor_timeout_seconds)
         valid_ids = {item["id"] for item in passages}
         matched_ids = [pid for pid in reply.passage_ids if pid in valid_ids]
-        if not matched_ids:
+        if not matched_ids and reply.passage_ids:
             for pid in reply.passage_ids:
                 if isinstance(pid, int) and 1 <= pid <= len(passages):
                     matched_ids.append(passages[pid - 1]["id"])
-        if not matched_ids and passages:
-            matched_ids = [passages[0]["id"]]
         reply.passage_ids = matched_ids[:3]
         return reply
 

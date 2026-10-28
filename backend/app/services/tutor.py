@@ -184,25 +184,40 @@ def ask(db: Session, user: User, lesson_id: int, question: str) -> dict:
             {"lesson_id": lesson.id, "section_id": section.id, "heading": section.heading}
             for section in top
         ]
-        if ai_available(settings):
-            try:
-                reply = GeminiProvider().answer(
-                    question,
-                    [{"id": section.id, "text": section.passage} for section in top],
-                )
+    elif sections:
+        top = sections[:3]
+    else:
+        top = []
+
+    if top and ai_available(settings):
+        try:
+            reply = GeminiProvider().answer(
+                question=question,
+                passages=[{"id": section.id, "heading": section.heading, "text": section.passage} for section in top],
+                lesson_title=lesson.title,
+                lesson_topic=lesson.topic,
+                lesson_summary=lesson.summary or "",
+            )
+            if reply.passage_ids:
                 used = [section for section in top if section.id in reply.passage_ids]
-                if used:
-                    primary = used[0]
-                    answer = reply.answer
-                    sources = [
-                        {"lesson_id": lesson.id, "section_id": section.id, "heading": section.heading}
-                        for section in used
-                    ]
-                    ai_used = True
-                mark_ai_success()
-            except ProviderError as exc:
-                mark_ai_failure()
-                logger.warning("tutor_provider_fallback lesson=%s error=%s", lesson.id, exc.message)
+                if not used and top:
+                    used = [top[0]]
+                answer = reply.answer
+                sources = [
+                    {"lesson_id": lesson.id, "section_id": section.id, "heading": section.heading}
+                    for section in used
+                ]
+                insufficient = False
+                ai_used = True
+            else:
+                insufficient = True
+                answer = reply.answer
+                sources = []
+                ai_used = True
+            mark_ai_success()
+        except ProviderError as exc:
+            mark_ai_failure()
+            logger.warning("tutor_provider_fallback lesson=%s error=%s", lesson.id, exc.message)
 
     session = TutorSession(user_id=user.id, lesson_id=lesson.id)
     db.add(session)
