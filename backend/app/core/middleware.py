@@ -54,12 +54,15 @@ class PlatformMiddleware(BaseHTTPMiddleware):
         request_id = request.headers.get("x-request-id", "")[:64] or uuid.uuid4().hex
         request.state.request_id = request_id
         path = request.url.path
+        if path.startswith("/api/api/"):
+            path = path[4:]
+            request.scope["path"] = path
         origin = request.headers.get("origin")
 
         if (
             origin
             and request.method not in {"GET", "HEAD", "OPTIONS"}
-            and origin.rstrip("/") not in self.settings.origins
+            and not self.settings.is_origin_allowed(origin)
         ):
             return self._respond(
                 request,

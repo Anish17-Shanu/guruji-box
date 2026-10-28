@@ -1,4 +1,12 @@
-const API_ROOT = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '') + '/api/v1';
+function resolveApiRoot(): string {
+  const envUrl = (import.meta.env.VITE_API_URL ?? '').trim().replace(/\/$/, '');
+  if (!envUrl) return '/api/v1';
+  if (envUrl.endsWith('/api/v1')) return envUrl;
+  if (envUrl.endsWith('/api')) return `${envUrl}/v1`;
+  return `${envUrl}/api/v1`;
+}
+
+const API_ROOT = resolveApiRoot();
 
 export interface FieldError {
   field: string;

@@ -81,6 +81,14 @@ class Settings(BaseSettings):
             )
         return list(dict.fromkeys(value for value in _split(",".join(values)) if value))
 
+    def is_origin_allowed(self, origin: str) -> bool:
+        normalized = origin.rstrip("/").lower()
+        if any(normalized == o.lower() for o in self.origins):
+            return True
+        if normalized.endswith(".vercel.app"):
+            return True
+        return False
+
     @property
     def trusted_hosts(self) -> list[str]:
         hosts = _split(self.allowed_hosts)
