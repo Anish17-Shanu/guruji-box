@@ -2,6 +2,11 @@
 
 **One box. Every learner. A smarter village.**
 
+[![Download Windows Installer (.exe)](https://img.shields.io/badge/Download-Windows%20Installer%20(.exe)-blue?style=for-the-badge&logo=windows)](https://github.com/Anish17-Shanu/guruji-box/releases/download/v2.0.0/Guruji-Box-Setup-2.0.0.exe)
+[![GitHub Release](https://img.shields.io/github/v/release/Anish17-Shanu/guruji-box?style=for-the-badge&color=green)](https://github.com/Anish17-Shanu/guruji-box/releases/latest)
+
+> 📦 **Windows Users:** Download the standalone offline app directly here: **[Guruji-Box-Setup-2.0.0.exe](https://github.com/Anish17-Shanu/guruji-box/releases/download/v2.0.0/Guruji-Box-Setup-2.0.0.exe)** (64-bit, ~140 MB). Runs fully offline without internet or Docker.
+
 GURUJI BOX is a self-hostable learning platform for learners, teachers, and community
 digital-skills programmes. It combines short textbook lessons, a tutor that answers only
 from lesson content, server-scored quizzes, class insight for teachers, printable
@@ -187,9 +192,9 @@ The `desktop/` folder packages the whole product as an installable Windows appli
 Electron for the window, a PyInstaller build of the FastAPI service, SQLite, and the
 bundled curriculum. It needs no internet, no Docker, and no separate backend.
 
-- **Download:** the home page has a **Download installer** card pointing at
-  [GitHub releases](https://github.com/Anish17-Shanu/guruji-box/releases/latest). The
-  `Desktop installer` workflow builds and attaches the installer when a `v*` tag is pushed.
+- **Download Installer (.exe):** [**Guruji-Box-Setup-2.0.0.exe**](https://github.com/Anish17-Shanu/guruji-box/releases/download/v2.0.0/Guruji-Box-Setup-2.0.0.exe) (~140 MB).
+- **All Releases & Notes:** [GitHub Releases](https://github.com/Anish17-Shanu/guruji-box/releases/latest). The
+  `Desktop installer` workflow builds and attaches the installer automatically when a `v*` tag is pushed.
 - **Build locally:** `npm --prefix desktop ci && npm --prefix desktop run dist`
 - **Output:** `desktop/release/Guruji-Box-Setup-<version>.exe`
 - **Data:** `%APPDATA%\GURUJI BOX\guruji.db`, with **File → Open data folder** in the app.
