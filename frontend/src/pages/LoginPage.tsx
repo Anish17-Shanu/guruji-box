@@ -100,6 +100,33 @@ export function LoginPage() {
         <form className="auth-card" onSubmit={submit} noValidate>
           <h2>{t('auth.signIn')}</h2>
           {error && <Alert tone="error">{error}</Alert>}
+
+          <div className="auth-quick-fill">
+            <span className="auth-quick-fill-label">⚡ {t('auth.demoTitle')}:</span>
+            <div className="auth-quick-fill-buttons">
+              {demoAccounts.map((account) => (
+                <button
+                  key={account.key}
+                  type="button"
+                  className={email === account.email ? 'chip active' : 'chip'}
+                  onClick={() => {
+                    setEmail(account.email);
+                    setPassword(account.password);
+                    setError('');
+                    setFields({});
+                  }}
+                >
+                  {t(
+                    account.key === 'learner'
+                      ? 'home.demo.learner'
+                      : account.key === 'teacher'
+                        ? 'home.demo.teacher'
+                        : 'home.demo.admin',
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
           <label className="field">
             <span>{t('auth.email')}</span>
             <input

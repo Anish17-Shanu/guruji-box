@@ -2439,6 +2439,33 @@ td select {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
 }
+.auth-quick-fill {
+  margin: 0.5rem 0 1.25rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.auth-quick-fill-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.auth-quick-fill-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.auth-quick-fill-buttons .chip {
+  cursor: pointer;
+  font-size: 0.84rem;
+  padding: 0.35rem 0.75rem;
+}
 .password-wrap {
   position: relative;
   display: block;

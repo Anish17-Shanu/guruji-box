@@ -1,7 +1,6 @@
 import type { Role } from '../api/types';
 
-export const demoEnabled =
-  import.meta.env.DEV || import.meta.env.VITE_SHOW_DEMO_HINTS === 'true';
+export const demoEnabled = true;
 
 export interface DemoAccount {
   role: Role;
