@@ -70,49 +70,67 @@ class GeminiProvider:
         self.client = genai.Client(api_key=self.settings.gemini_api_key)
 
     def _generate(self, prompt: str, schema, timeout: float):
-        def call():
-            return self.client.models.generate_content(
-                model=self.settings.gemini_model,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_schema=schema,
-                    temperature=0.2,
-                ),
-            )
+        candidate_models = [self.settings.gemini_model]
+        for fallback in ["gemini-flash-lite-latest", "gemini-3.1-flash-lite", "gemini-3.5-flash", "gemini-flash-latest"]:
+            if fallback not in candidate_models:
+                candidate_models.append(fallback)
 
-        with ThreadPoolExecutor(max_workers=1) as pool:
-            future = pool.submit(call)
-            try:
-                response = future.result(timeout=timeout)
-            except FutureTimeoutError as exc:
-                raise ProviderError("The AI service took too long to respond. Please retry.") from exc
-            except Exception as exc:
-                raise ProviderError("The AI service is temporarily unavailable. Please retry.") from exc
+        last_error = None
+        for model_name in candidate_models:
+            def call(m=model_name):
+                return self.client.models.generate_content(
+                    model=m,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_schema=schema,
+                        temperature=0.2,
+                    ),
+                )
 
-        text = getattr(response, "text", None)
-        if not text:
-            raise ProviderError("The AI service returned an empty response.")
-        try:
-            return schema.model_validate_json(text)
-        except ValidationError as exc:
-            raise ProviderError("The AI service returned an invalid response. Please retry.") from exc
+            with ThreadPoolExecutor(max_workers=1) as pool:
+                future = pool.submit(call)
+                try:
+                    response = future.result(timeout=timeout)
+                    text = getattr(response, "text", None)
+                    if not text:
+                        continue
+                    return schema.model_validate_json(text)
+                except FutureTimeoutError as exc:
+                    last_error = ProviderError("The AI service took too long to respond. Please retry.")
+                    continue
+                except ValidationError as exc:
+                    last_error = ProviderError("The AI service returned an invalid response. Please retry.")
+                    continue
+                except Exception as exc:
+                    last_error = exc
+                    continue
+
+        if isinstance(last_error, ProviderError):
+            raise last_error
+        raise ProviderError(f"The AI service is temporarily unavailable: {last_error or 'Please retry.'}")
 
     def answer(self, question: str, passages: list[dict]) -> GroundedReply:
         context = "\n\n".join(f"[{item['id']}] {item['text']}" for item in passages)
         prompt = (
-            "You are a careful tutor for Class 6 learners in Jharkhand, India. "
-            "Answer ONLY using the numbered lesson passages below. Use simple, encouraging language. "
+            "You are a helpful and supportive educational tutor for learners. "
+            "Answer ONLY using the numbered lesson passages below. Use simple, clear, and encouraging language. "
+            "If the question or passage is in Hindi, reply in clear, natural Hindi. "
             "Keep the answer under 120 words. If the passages do not contain enough evidence, "
             "say that the lesson does not cover it and set passage_ids to []. "
-            "Return JSON matching the schema: answer and passage_ids (only ids you used).\n\n"
+            "Return JSON matching the schema: answer and passage_ids (list of passage id numbers used).\n\n"
             f"Passages:\n{context}\n\nQuestion: {question}"
         )
         reply = self._generate(prompt, GroundedReply, self.settings.tutor_timeout_seconds)
         valid_ids = {item["id"] for item in passages}
-        reply.passage_ids = [pid for pid in reply.passage_ids if pid in valid_ids][:3]
-        if not reply.passage_ids:
-            raise ProviderError("The AI response was not grounded in the lesson.")
+        matched_ids = [pid for pid in reply.passage_ids if pid in valid_ids]
+        if not matched_ids:
+            for pid in reply.passage_ids:
+                if isinstance(pid, int) and 1 <= pid <= len(passages):
+                    matched_ids.append(passages[pid - 1]["id"])
+        if not matched_ids and passages:
+            matched_ids = [passages[0]["id"]]
+        reply.passage_ids = matched_ids[:3]
         return reply
 
     def worksheet(

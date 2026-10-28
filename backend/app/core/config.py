@@ -49,7 +49,7 @@ class Settings(BaseSettings):
     docs_enabled: bool | None = None
 
     gemini_api_key: str | None = None
-    gemini_model: str = "gemini-2.5-flash"
+    gemini_model: str = "gemini-flash-lite-latest"
     tutor_timeout_seconds: float = 12.0
     worksheet_timeout_seconds: float = 30.0
 
