@@ -1,13 +1,62 @@
+name: guruji-box
+
 services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: guruji
-      POSTGRES_USER: guruji
-      POSTGRES_PASSWORD: guruji
-    ports: ["5432:5432"]
+      POSTGRES_DB: ${POSTGRES_DB:-guruji}
+      POSTGRES_USER: ${POSTGRES_USER:-guruji}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - db-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U guruji -d guruji"]
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
       interval: 5s
       timeout: 5s
-      retries: 10
+      retries: 12
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      APP_ENV: ${APP_ENV:-production}
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-guruji}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-guruji}
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env}
+      FRONTEND_ORIGIN: ${PUBLIC_ORIGIN:-http://localhost:8080}
+      EXTRA_ORIGINS: ${EXTRA_ORIGINS:-}
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-*}
+      SECURE_COOKIES: ${SECURE_COOKIES:-}
+      SESSION_DAYS: ${SESSION_DAYS:-7}
+      CONTENT_DIR: /app/data
+      SEED_ON_START: ${SEED_ON_START:-true}
+      ALLOW_TEACHER_SIGNUP: ${ALLOW_TEACHER_SIGNUP:-true}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-2}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      RATE_LIMIT_AUTH_PER_MINUTE: ${RATE_LIMIT_AUTH_PER_MINUTE:-20}
+      RATE_LIMIT_TUTOR_PER_MINUTE: ${RATE_LIMIT_TUTOR_PER_MINUTE:-30}
+      RATE_LIMIT_DEFAULT_PER_MINUTE: ${RATE_LIMIT_DEFAULT_PER_MINUTE:-600}
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-}
+        VITE_SHOW_DEMO_HINTS: ${VITE_SHOW_DEMO_HINTS:-false}
+    ports:
+      - "${HTTP_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  db-data:

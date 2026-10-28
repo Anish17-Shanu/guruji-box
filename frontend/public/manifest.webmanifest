@@ -1,0 +1,41 @@
+{
+  "name": "Guruji Box — One box, every learner",
+  "short_name": "Guruji Box",
+  "description": "Friendly lessons, a grounded tutor, teaching insight and practical digital skills for every learner.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#fbf7ef",
+  "theme_color": "#0b5d5f",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Lessons", "short_name": "Learn", "url": "/learn" },
+    { "name": "My progress", "short_name": "Progress", "url": "/progress" },
+    { "name": "Digital skills", "short_name": "Skills", "url": "/skills" }
+  ]
+}

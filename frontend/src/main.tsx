@@ -1,13 +1,28 @@
-import React,{useEffect,useState} from 'react';import{createRoot}from'react-dom/client';import{BrowserRouter,Link,Route,Routes,useNavigate,useParams}from'react-router-dom';import'./style.css';
-const api=import.meta.env.VITE_API_URL||'/api';const get=(p:string)=>fetch(api+'/v1'+p,{credentials:'include'}).then(r=>r.ok?r.json():Promise.reject());
-function Header(){const[hi,setHi]=useState(false);return <header><Link to="/" className="brand">GURUJI <i>BOX</i></Link><nav><Link to="/learn">{hi?'सीखें':'Learn'}</Link><Link to="/skills">{hi?'कौशल':'Skills'}</Link><Link to="/teach">{hi?'पढ़ाएँ':'Teach'}</Link></nav><button className="language" onClick={()=>setHi(!hi)} aria-label="Switch language">{hi?'EN':'हिन्दी'}</button><Link className="button" to="/login">{hi?'प्रोफ़ाइल':'Profile'}</Link></header>}
-function Home(){return <main><section className="hero"><p className="eyebrow">One Box. Every Learner. A Smarter Village.</p><h1>Learning that feels clear, kind and possible.</h1><p>Lessons, teaching insight and practical digital skills for Jharkhand communities.</p><Link className="button" to="/learn">Start learning</Link></section><section className="grid">{[['Learn','Read friendly lessons and build confidence.','/learn'],['Teach','See what your class needs next.','/teach'],['Skill','Build everyday digital know-how.','/skills']].map(([a,b,c])=><article className="card" key={a}><h2>{a}</h2><p>{b}</p><Link to={c}>Explore →</Link></article>)}</section></main>}
-function Login(){const nav=useNavigate();const[email,setEmail]=useState('learner@guruji.demo');const[password,setPassword]=useState('DemoPass123!');const[err,setErr]=useState('');async function go(e:React.FormEvent){e.preventDefault();let r=await fetch(api+'/v1/auth/login',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password})});r.ok?nav('/learn'):setErr('Unable to sign in. Check your details.')}return <main className="narrow"><h1>Welcome back</h1><form onSubmit={go}><label>Email<input value={email} onChange={e=>setEmail(e.target.value)}/></label><label>Password<input type="password" value={password} onChange={e=>setPassword(e.target.value)}/></label>{err&&<p role="alert">{err}</p>}<button>Log in</button></form></main>}
-function Learn(){const[x,setX]=useState<any[]>([]);useEffect(()=>{get('/lessons').then(setX)},[]);return <main><h1>Learn</h1><p className="muted">Class 6 • choose a topic</p><section className="grid">{x.map(l=><article className="card" key={l.id}><span className="badge">{l.subject}</span><h2>{l.title}</h2><p>{l.summary}</p><Link to={'/learn/'+l.id}>Open lesson</Link></article>)}</section></main>}
-function Lesson(){const{id}=useParams();const[l,setL]=useState<any>();const[q,setQ]=useState('');const[a,setA]=useState<any>();useEffect(()=>{get('/lessons/'+id).then(setL)},[id]);async function ask(e:React.FormEvent){e.preventDefault();let r=await fetch(api+'/v1/tutor/chat',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({lesson_id:Number(id),question:q})});setA(await r.json())}if(!l)return <main>Loading lesson…</main>;return <main className="lesson"><article><p className="eyebrow">{l.topic}</p><h1>{l.title}</h1><p>{l.summary}</p>{l.sections.map((s:any)=><section key={s.id}><h2>{s.heading}</h2><p>{s.passage}</p></section>)}<Link className="button" to={'/quiz/'+l.quiz_id}>Take quiz</Link></article><aside className="card tutor"><h2>Ask Guruji</h2><p>Ask about this lesson.</p><form onSubmit={ask}><input aria-label="Question" value={q} onChange={e=>setQ(e.target.value)} placeholder="What does this mean?"/><button>Ask</button></form>{a&&<div className="answer">{a.answer}{a.sources?.map((s:any)=><small key={s.section}>{s.section}</small>)}</div>}</aside></main>}
-function Quiz(){const{id}=useParams();const[q,setQ]=useState<any>();const[i,setI]=useState(0);const[answers,setAnswers]=useState<any[]>([]);const[result,setResult]=useState<any>();useEffect(()=>{get('/quizzes/'+id).then(setQ)},[id]);if(!q)return <main>Loading quiz…</main>;if(result)return <main className="narrow"><h1>Your score: {result.score}/{result.total}</h1><p>{result.recommendation}</p><Link className="button" to="/progress">View my progress</Link></main>;let cur=q.questions[i];function choose(selected:string){let next=[...answers.filter(a=>a.question_id!==cur.id),{question_id:cur.id,selected}];setAnswers(next);if(i<q.questions.length-1)setI(i+1);else fetch(api+'/v1/assessments/submit',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({quiz_id:q.id,answers:next})}).then(r=>r.json()).then(setResult)}return <main className="narrow"><p className="eyebrow">Question {i+1} of {q.questions.length}</p><h1>{cur.prompt}</h1><div className="choices">{cur.choices.map((x:string)=><button key={x} onClick={()=>choose(x)}>{x}</button>)}</div></main>}
-function Skills(){const[c,setC]=useState<any[]>([]);useEffect(()=>{get('/skills/courses').then(setC)},[]);return <main><h1>Skills</h1>{c.map(x=><article className="card" key={x.id}><h2>{x.title}</h2><p>{x.description}</p><Link to={'/skills/'+x.id}>Resume course</Link></article>)}</main>}
-function Course(){const{id}=useParams();const[c,setC]=useState<any>();useEffect(()=>{get('/skills/courses/'+id).then(setC)},[id]);if(!c)return <main>Loading course…</main>;return <main><h1>{c.title}</h1>{c.lessons.map((l:any)=><article className="card" key={l.id}><h2>{l.title}</h2><p>{l.body}</p><button onClick={()=>fetch(api+'/v1/skills/progress',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({lesson_id:l.id})})}>Mark complete</button></article>)}</main>}
-function Teach(){const[d,setD]=useState<any>();useEffect(()=>{get('/teacher/dashboard').then(setD).catch(()=>setD({error:true}))},[]);if(!d)return <main>Loading dashboard…</main>;if(d.error)return <main><h1>Teach</h1><p>Please sign in with a teacher account to view a class dashboard.</p></main>;return <main><h1>Teach</h1><section className="grid"><article className="card"><h2>{d.learners}</h2><p>Learners in your classes</p></article><article className="card"><h2>{d.attempts}</h2><p>Recorded attempts</p></article></section></main>}
-function Progress(){const[p,setP]=useState<any[]>([]);useEffect(()=>{get('/learners/me/progress').then(setP)},[]);return <main><h1>My Progress</h1>{p.length?p.map(x=><article className="card" key={x.lesson_id}><h2>{x.title}</h2><div className="bar"><i style={{width:x.mastery+'%'}}/></div><p>{x.mastery}% mastery</p></article>):<p className="card">Complete a quiz to begin your progress story.</p>}</main>}
-function App(){return <><Header/><Routes><Route path="/" element={<Home/>}/><Route path="/login" element={<Login/>}/><Route path="/learn" element={<Learn/>}/><Route path="/learn/:id" element={<Lesson/>}/><Route path="/quiz/:id" element={<Quiz/>}/><Route path="/skills" element={<Skills/>}/><Route path="/skills/:id" element={<Course/>}/><Route path="/teach" element={<Teach/>}/><Route path="/progress" element={<Progress/>}/></Routes></>};createRoot(document.getElementById('root')!).render(<BrowserRouter><App/></BrowserRouter>);
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import { AuthProvider } from './auth/AuthContext';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LanguageProvider } from './i18n';
+import { registerServiceWorker } from './pwa';
+import './style.css';
+
+const container = document.getElementById('root');
+if (!container) throw new Error('Root element not found');
+
+createRoot(container).render(
+  <StrictMode>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <LanguageProvider>
+          <AuthProvider>
+            <App />
+          </AuthProvider>
+        </LanguageProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
+  </StrictMode>,
+);
+
+registerServiceWorker();

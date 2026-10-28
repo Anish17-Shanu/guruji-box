@@ -1,0 +1,33 @@
+appId: org.gurujibox.desktop
+productName: GURUJI BOX
+copyright: Copyright © 2026 Anish Kumar
+directories:
+  output: release
+  buildResources: build
+files:
+  - electron/**/*
+  - package.json
+  - build/icon.png
+extraResources:
+  - from: ../backend/dist/GurujiBackend
+    to: backend
+asar: true
+compression: normal
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.png
+  artifactName: Guruji-Box-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: GURUJI BOX
+  uninstallDisplayName: GURUJI BOX
+  runAfterFinish: true
+  deleteAppDataOnUninstall: false

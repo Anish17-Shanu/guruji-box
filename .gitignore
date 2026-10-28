@@ -1,6 +1,41 @@
+# Secrets and local data
 .env
+.env.*
+!.env.example
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+backend/e2e.db
+
+# Python
 __pycache__/
+*.py[cod]
 .pytest_cache/
+.venv/
+venv/
+
+# Node / frontend
 node_modules/
 dist/
-.venv/
+frontend/tsconfig.tsbuildinfo
+frontend/playwright-report/
+frontend/test-results/
+frontend/blob-report/
+coverage/
+
+# Desktop packaging
+backend/build/
+backend/dist/
+desktop/release*/
+desktop/artifacts/
+desktop/*.exe
+desktop/.install-test/
+desktop/.install-final/
+desktop/tmp_userdata/
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

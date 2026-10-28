@@ -1,1 +1,267 @@
-{"class_level":6,"subjects":["Mathematics: Fractions","Science: Photosynthesis"],"license":"CC BY 4.0","attribution":"Original GURUJI BOX educational content"}
+{
+  "class_level": 6,
+  "license": "CC BY 4.0",
+  "attribution": "Original GURUJI BOX educational content",
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "slug": "mathematics",
+      "lessons": [
+        {
+          "slug": "fractions",
+          "title": "Fractions",
+          "topic": "Fractions",
+          "summary": "A fraction names equal parts of a whole and helps us compare and combine parts.",
+          "estimated_minutes": 20,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Equal parts",
+              "passage": "A fraction describes equal parts of one whole. The denominator is the number below the line and tells how many equal parts make the whole. The numerator is the number above the line and tells how many of those parts we choose. For example, 3/4 means three of four equal parts."
+            },
+            {
+              "heading": "Comparing fractions",
+              "passage": "When two fractions have the same denominator, the fraction with the greater numerator is greater. When denominators are different, find a common denominator. The fractions 1/2 and 2/4 name the same amount because 2/4 can be simplified to 1/2."
+            },
+            {
+              "heading": "Fractions in daily life",
+              "passage": "We use fractions when sharing food, measuring ingredients and reading time. Half a roti, one quarter of a chapati and three quarters of a glass are everyday fractions. A fraction can also be shown on a number line between 0 and 1."
+            }
+          ],
+          "quiz": {
+            "title": "Fractions check",
+            "questions": [
+              {
+                "prompt": "What does the denominator tell us?",
+                "choices": ["How many equal parts make the whole", "How many parts are chosen", "The size of the numerator", "The colour of the shape"],
+                "answer": "How many equal parts make the whole",
+                "explanation": "The denominator is below the fraction line and names the number of equal parts in the whole.",
+                "topic": "Fractions"
+              },
+              {
+                "prompt": "In the fraction 3/4, what does 3 show?",
+                "choices": ["Three equal parts are chosen", "Four equal parts are chosen", "The whole is three", "There are three wholes"],
+                "answer": "Three equal parts are chosen",
+                "explanation": "The numerator counts the chosen parts, so 3 of the 4 equal parts are chosen.",
+                "topic": "Fractions"
+              },
+              {
+                "prompt": "Which fraction is greater: 5/8 or 3/8?",
+                "choices": ["5/8", "3/8", "They are equal", "Cannot compare"],
+                "answer": "5/8",
+                "explanation": "With the same denominator, the fraction with the greater numerator is greater.",
+                "topic": "Comparing fractions"
+              },
+              {
+                "prompt": "Which fraction is equivalent to 1/2?",
+                "choices": ["2/4", "1/3", "2/5", "3/5"],
+                "answer": "2/4",
+                "explanation": "2/4 simplifies to 1/2 because both numbers can be divided by 2.",
+                "topic": "Comparing fractions"
+              },
+              {
+                "prompt": "A roti is cut into 4 equal parts. You eat 1 part. What fraction did you eat?",
+                "choices": ["1/4", "1/2", "3/4", "4/1"],
+                "answer": "1/4",
+                "explanation": "One chosen part out of four equal parts is written as 1/4.",
+                "topic": "Fractions in daily life"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "decimals",
+          "title": "Decimals",
+          "topic": "Decimals",
+          "summary": "Decimals write fractions of tenths and hundredths using a decimal point.",
+          "estimated_minutes": 20,
+          "position": 2,
+          "sections": [
+            {
+              "heading": "Tenths and hundredths",
+              "passage": "The first digit after the decimal point shows tenths. The second digit shows hundredths. The decimal 0.3 means three tenths, or 3/10. The decimal 0.35 means thirty-five hundredths, or 35/100. The decimal point separates whole numbers from parts of a whole."
+            },
+            {
+              "heading": "Comparing decimals",
+              "passage": "Compare digits from left to right. Start with the whole numbers, then tenths, then hundredths. The decimal 0.7 is greater than 0.65 because seven tenths is more than six tenths. Adding a zero after the last decimal digit does not change the value, so 0.5 is equal to 0.50."
+            },
+            {
+              "heading": "Money and measurement",
+              "passage": "Rupees and paise use decimals: 12.50 rupees means twelve rupees and fifty paise. Lengths such as 1.5 metres mean one metre and five tenths of a metre. Decimals help us read and compare measurements quickly."
+            }
+          ],
+          "quiz": {
+            "title": "Decimals check",
+            "questions": [
+              {
+                "prompt": "What does 0.3 mean?",
+                "choices": ["Three tenths", "Three wholes", "Thirty tenths", "Three hundredths"],
+                "answer": "Three tenths",
+                "explanation": "The first digit after the decimal point shows tenths, so 0.3 is 3/10.",
+                "topic": "Tenths and hundredths"
+              },
+              {
+                "prompt": "Which decimal is greater: 0.7 or 0.65?",
+                "choices": ["0.7", "0.65", "They are equal", "Cannot compare"],
+                "answer": "0.7",
+                "explanation": "Seven tenths is more than six tenths, so 0.7 is greater.",
+                "topic": "Comparing decimals"
+              },
+              {
+                "prompt": "Which decimal equals 0.5?",
+                "choices": ["0.50", "0.05", "5.0", "50.0"],
+                "answer": "0.50",
+                "explanation": "A zero after the last decimal digit does not change the value.",
+                "topic": "Comparing decimals"
+              },
+              {
+                "prompt": "12.50 rupees means:",
+                "choices": ["Twelve rupees and fifty paise", "Twelve hundred rupees", "One rupee and 250 paise", "Twelve rupees and five paise"],
+                "answer": "Twelve rupees and fifty paise",
+                "explanation": "The digits after the decimal point show paise in a money amount.",
+                "topic": "Money and measurement"
+              },
+              {
+                "prompt": "In 0.35, the digit 5 is in which place?",
+                "choices": ["Hundredths", "Tenths", "Ones", "Tens"],
+                "answer": "Hundredths",
+                "explanation": "The second digit after the decimal point is the hundredths place.",
+                "topic": "Tenths and hundredths"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Science",
+      "slug": "science",
+      "lessons": [
+        {
+          "slug": "photosynthesis",
+          "title": "Photosynthesis",
+          "topic": "Photosynthesis",
+          "summary": "Plants make food using light, water and carbon dioxide.",
+          "estimated_minutes": 20,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "What plants need",
+              "passage": "Green plants make their own food. They need sunlight, water from the soil and carbon dioxide from the air. The green substance chlorophyll in leaves captures light energy."
+            },
+            {
+              "heading": "What plants produce",
+              "passage": "Photosynthesis makes sugar, called glucose, which the plant uses for energy and growth. Oxygen is released into the air as a by-product. This is one reason plants are important for the air we breathe."
+            },
+            {
+              "heading": "Leaves and light",
+              "passage": "Leaves are shaped and arranged to catch sunlight. Tiny openings called stomata let carbon dioxide enter and oxygen leave. Water travels from the roots through the stem to the leaves."
+            }
+          ],
+          "quiz": {
+            "title": "Photosynthesis check",
+            "questions": [
+              {
+                "prompt": "Which gas do plants take in for photosynthesis?",
+                "choices": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+                "answer": "Carbon dioxide",
+                "explanation": "Plants take carbon dioxide from the air through tiny openings in the leaves.",
+                "topic": "What plants need"
+              },
+              {
+                "prompt": "What does chlorophyll do?",
+                "choices": ["Captures light energy", "Stores water", "Makes soil", "Cools the air"],
+                "answer": "Captures light energy",
+                "explanation": "Chlorophyll is the green substance that captures light energy in leaves.",
+                "topic": "What plants need"
+              },
+              {
+                "prompt": "Which gas is released by photosynthesis?",
+                "choices": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"],
+                "answer": "Oxygen",
+                "explanation": "Oxygen is released into the air as a by-product of photosynthesis.",
+                "topic": "What plants produce"
+              },
+              {
+                "prompt": "Where does the water needed by a plant come from?",
+                "choices": ["Roots", "Leaves", "Flowers", "Air"],
+                "answer": "Roots",
+                "explanation": "Water is taken from the soil by the roots and travels up the stem.",
+                "topic": "Leaves and light"
+              },
+              {
+                "prompt": "What sugar does photosynthesis make?",
+                "choices": ["Glucose", "Salt", "Protein", "Oil"],
+                "answer": "Glucose",
+                "explanation": "Photosynthesis produces glucose, a sugar the plant uses for energy and growth.",
+                "topic": "What plants produce"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "components-of-food",
+          "title": "Components of Food",
+          "topic": "Components of Food",
+          "summary": "Food gives us energy and the materials our bodies need to grow, repair and stay healthy.",
+          "estimated_minutes": 20,
+          "position": 2,
+          "sections": [
+            {
+              "heading": "Nutrients",
+              "passage": "Carbohydrates and fats give energy. Proteins help the body grow and repair itself. Vitamins and minerals protect us from disease and keep our body working well. Water is also needed for digestion and for carrying nutrients."
+            },
+            {
+              "heading": "A balanced diet",
+              "passage": "A balanced diet includes energy-giving foods, body-building foods and protective foods in the right amounts. Dal, rice, vegetables, fruit, milk and eggs are examples. No single food contains everything we need."
+            },
+            {
+              "heading": "Food and health",
+              "passage": "Too little food can make a person weak. Too much oily or sugary food can cause health problems. Washing food and hands helps prevent illness. A varied diet and clean water support good health."
+            }
+          ],
+          "quiz": {
+            "title": "Components of Food check",
+            "questions": [
+              {
+                "prompt": "Which nutrient mainly gives energy?",
+                "choices": ["Carbohydrates", "Proteins", "Minerals", "Water"],
+                "answer": "Carbohydrates",
+                "explanation": "Carbohydrates and fats are energy-giving nutrients.",
+                "topic": "Nutrients"
+              },
+              {
+                "prompt": "Protein helps the body to:",
+                "choices": ["Grow and repair", "Change colour", "Store sunlight", "Breathe underwater"],
+                "answer": "Grow and repair",
+                "explanation": "Proteins are body-building nutrients used for growth and repair.",
+                "topic": "Nutrients"
+              },
+              {
+                "prompt": "A balanced diet should include:",
+                "choices": ["Energy-giving, body-building and protective foods", "Only rice", "Only fruit", "Only fats"],
+                "answer": "Energy-giving, body-building and protective foods",
+                "explanation": "A balanced diet combines different kinds of food in the right amounts.",
+                "topic": "A balanced diet"
+              },
+              {
+                "prompt": "Which choice is a protective food?",
+                "choices": ["Fruit and vegetables", "Sugar", "Oil", "Butter"],
+                "answer": "Fruit and vegetables",
+                "explanation": "Fruit and vegetables provide vitamins and minerals that protect us from disease.",
+                "topic": "A balanced diet"
+              },
+              {
+                "prompt": "Why should we wash our hands before eating?",
+                "choices": ["To help prevent illness", "To make food sweet", "To grow taller", "To add vitamins"],
+                "answer": "To help prevent illness",
+                "explanation": "Clean hands reduce the chance of germs getting into our food.",
+                "topic": "Food and health"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

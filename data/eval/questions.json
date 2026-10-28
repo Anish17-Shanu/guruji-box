@@ -1,6 +1,62 @@
 [
-  {"lesson":"Fractions","question":"What does a denominator tell us?","expected_section":"Equal parts","kind":"relevant"},
-  {"lesson":"Photosynthesis","question":"How do leaves use light?","expected_section":"What plants need","kind":"relevant"},
-  {"lesson":"Fractions","question":"Tell me about football.","expected_section":null,"kind":"unrelated"},
-  {"lesson":"Photosynthesis","question":"Why is the sky blue?","expected_section":null,"kind":"insufficient-evidence"}
+  {
+    "lesson": "Fractions",
+    "question": "What does a denominator tell us?",
+    "expected_section": "Equal parts",
+    "kind": "relevant"
+  },
+  {
+    "lesson": "Fractions",
+    "question": "Which fraction is greater: 5/8 or 3/8?",
+    "expected_section": "Comparing fractions",
+    "kind": "relevant"
+  },
+  {
+    "lesson": "Decimals",
+    "question": "What is the first digit after the decimal point called?",
+    "expected_section": "Tenths and hundredths",
+    "kind": "relevant"
+  },
+  {
+    "lesson": "Photosynthesis",
+    "question": "How do leaves use light?",
+    "expected_section": "Leaves and light",
+    "kind": "relevant"
+  },
+  {
+    "lesson": "Photosynthesis",
+    "question": "What gas is released?",
+    "expected_section": "What plants produce",
+    "kind": "relevant"
+  },
+  {
+    "lesson": "Photosynthesis",
+    "question": "What do plants need?",
+    "expected_section": "What plants need",
+    "kind": "relevant"
+  },
+  {
+    "lesson": "Components of Food",
+    "question": "What do proteins do?",
+    "expected_section": "Nutrients",
+    "kind": "relevant"
+  },
+  {
+    "lesson": "Fractions",
+    "question": "Tell me about football.",
+    "expected_section": null,
+    "kind": "unrelated"
+  },
+  {
+    "lesson": "Photosynthesis",
+    "question": "Why is the sky blue?",
+    "expected_section": null,
+    "kind": "insufficient-evidence"
+  },
+  {
+    "lesson": "Decimals",
+    "question": "Who won the cricket match?",
+    "expected_section": null,
+    "kind": "unrelated"
+  }
 ]

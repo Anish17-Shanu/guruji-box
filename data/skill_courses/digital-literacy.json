@@ -1,1 +1,42 @@
-{"title":"Digital Literacy for Beginners","lessons":["Devices","Internet search","Email and passwords","Responsible tools"]}
+{
+  "courses": [
+    {
+      "slug": "digital-literacy",
+      "title": "Digital Literacy for Beginners",
+      "description": "Practical foundations for using computers, smartphones and the internet safely.",
+      "position": 1,
+      "lessons": [
+        {
+          "slug": "devices-and-controls",
+          "title": "Devices and controls",
+          "body": "Learn the main parts of a computer and smartphone: the screen, keyboard or touch screen, power button, charging port, volume controls and home button. Charge safely using the cable and charger that came with the device. Keep drinks away from devices and rest your eyes regularly."
+        },
+        {
+          "slug": "internet-search",
+          "title": "Internet search",
+          "body": "Type a clear question or a few important words, putting the most specific word first. Open more than one result and check who wrote it and when. Compare what you find with a trusted source such as a school book or an official website."
+        },
+        {
+          "slug": "email-and-passwords",
+          "title": "Email and passwords",
+          "body": "An email address has a name, the @ symbol and a domain. Use a long passphrase with several words instead of your name or birthday. Use a different password for each important account. Never share your password, even with someone who says they are from a company."
+        },
+        {
+          "slug": "recognising-phishing",
+          "title": "Recognising phishing",
+          "body": "Phishing messages ask you to click a link, send a password or pay urgently. Check the sender address, look for spelling mistakes and be suspicious of urgent threats. When unsure, contact the organisation using a phone number you already have."
+        },
+        {
+          "slug": "safe-mobile-payments",
+          "title": "Safe mobile payments",
+          "body": "Enter your PIN privately and never share an OTP with anyone. Read the amount before confirming a payment. Use the app's official support channel if money is taken wrongly. Keep a receipt or screenshot for your records."
+        },
+        {
+          "slug": "responsible-sharing",
+          "title": "Responsible sharing",
+          "body": "Pause before sharing photos, phone numbers or your location. Ask the people in a photo before posting it. Once something is online it can be copied and is hard to remove. Report bullying or harmful content to a trusted adult."
+        }
+      ]
+    }
+  ]
+}
