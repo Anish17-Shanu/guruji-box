@@ -1,0 +1,355 @@
+{
+  "class_level": 7,
+  "license": "CC BY 4.0",
+  "attribution": "Original GURUJI BOX educational content",
+  "subjects": [
+    {
+      "name": "Science",
+      "slug": "science-class-7",
+      "lessons": [
+        {
+          "slug": "nutrition-in-plants",
+          "title": "Nutrition in Plants",
+          "topic": "Nutrition in Plants",
+          "summary": "How autotrophs produce food through photosynthesis and how heterotrophic plants obtain nourishment.",
+          "estimated_minutes": 25,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Modes of Nutrition",
+              "passage": "All living organisms require food for energy, growth, and tissue repair. Autotrophic nutrition is the process where organisms produce food themselves from simple substances. Green plants are autotrophs because they make food using sunlight, water, carbon dioxide, and chlorophyll. Heterotrophs, including animals, non-green plants, and humans, depend on autotrophs for nourishment."
+            },
+            {
+              "heading": "The Mechanism of Photosynthesis",
+              "passage": "Photosynthesis takes place in chloroplasts located in green leaves. Carbon dioxide enters through tiny pores on leaf surfaces called stomata, guarded by guard cells. Roots absorb water and dissolved minerals from soil through xylem vessels. Sunlight captured by green chlorophyll pigment converts water and carbon dioxide into carbohydrates (glucose) while releasing oxygen into the air."
+            },
+            {
+              "heading": "Other Modes of Plant Nutrition",
+              "passage": "Certain plants lack chlorophyll and cannot photosynthesise. Cuscuta (Amarbel) is a parasite that derives nutrients directly from a host tree. Insectivorous plants like the Pitcher plant capture insects to supplement nitrogen in nutrient-poor soils. Fungi, such as mushrooms and bread mould, follow saprotrophic nutrition by secreting digestive juices onto dead and decaying matter."
+            }
+          ],
+          "quiz": {
+            "title": "Nutrition in Plants Quiz",
+            "questions": [
+              {
+                "prompt": "What are the tiny pores on the surface of leaves called?",
+                "choices": ["Stomata", "Chloroplasts", "Xylem", "Phloem"],
+                "answer": "Stomata",
+                "explanation": "Stomata are small pores surrounded by guard cells that allow carbon dioxide intake and transpiration.",
+                "topic": "Photosynthesis"
+              },
+              {
+                "prompt": "Which of these is an example of a parasitic plant?",
+                "choices": ["Cuscuta (Amarbel)", "Pitcher plant", "Rose", "Mango"],
+                "answer": "Cuscuta (Amarbel)",
+                "explanation": "Cuscuta has yellow tubular stems without chlorophyll that climb host trees and take ready-made nutrients.",
+                "topic": "Plant Nutrition"
+              },
+              {
+                "prompt": "What gas is released during the process of photosynthesis?",
+                "choices": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+                "answer": "Oxygen",
+                "explanation": "During photosynthesis, plants split water molecules and release oxygen as a vital by-product.",
+                "topic": "Photosynthesis"
+              },
+              {
+                "prompt": "Organisms that feed on dead and decaying matter are called:",
+                "choices": ["Saprotrophs", "Autotrophs", "Herbivores", "Carnivores"],
+                "answer": "Saprotrophs",
+                "explanation": "Saprotrophs secrete digestive juices on dead organic matter and absorb the soluble nutrients.",
+                "topic": "Plant Nutrition"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "heat-and-temperature",
+          "title": "Heat and Temperature",
+          "topic": "Heat and Temperature",
+          "summary": "Understanding temperature measurement, heat transfer through conduction, convection, and radiation.",
+          "estimated_minutes": 25,
+          "position": 2,
+          "sections": [
+            {
+              "heading": "Temperature and Thermometers",
+              "passage": "Temperature is a reliable measure of the hotness or coldness of an object, measured using a thermometer in degrees Celsius. A clinical thermometer measures human body temperature between 35°C and 42°C (normal human body temperature is approximately 37°C). Laboratory thermometers have a broader range, typically from -10°C to 110°C, and must be read while immersed in the liquid."
+            },
+            {
+              "heading": "Conduction and Convection",
+              "passage": "Heat flows from an object at higher temperature to one at lower temperature. In solids, heat transfers mainly by conduction without particles leaving their positions; materials that allow heat flow easily are conductors (iron, copper), while insulators (wood, plastic) resist it. In liquids and gases, heat transfers by convection: warmer, lighter fluid rises and cooler fluid moves down to take its place."
+            },
+            {
+              "heading": "Radiation, Sea Breeze, and Land Breeze",
+              "passage": "Radiation is heat transfer that requires no medium; the Sun's energy reaches Earth across vacuum via radiation. Dark surfaces absorb and radiate heat better than light surfaces. In coastal regions, land heats faster than water during the day, causing air over land to rise while cool sea air rushes in, creating a sea breeze. At night, land cools faster, reversing the airflow to create a land breeze."
+            }
+          ],
+          "quiz": {
+            "title": "Heat and Temperature Check",
+            "questions": [
+              {
+                "prompt": "What is the normal temperature of the human body in Celsius?",
+                "choices": ["37°C", "98.6°C", "35°C", "42°C"],
+                "answer": "37°C",
+                "explanation": "Normal average human body temperature is 37°C (or 98.6°F).",
+                "topic": "Heat and Temperature"
+              },
+              {
+                "prompt": "Which process transfers heat through empty space with no medium?",
+                "choices": ["Radiation", "Conduction", "Convection", "Insulation"],
+                "answer": "Radiation",
+                "explanation": "Radiation does not require any physical material or medium to transfer thermal energy.",
+                "topic": "Heat Transfer"
+              },
+              {
+                "prompt": "A metal spoon gets hot in a bowl of soup primarily due to:",
+                "choices": ["Conduction", "Convection", "Radiation", "Expansion"],
+                "answer": "Conduction",
+                "explanation": "Conduction is the transfer of heat through solid materials from molecule to molecule.",
+                "topic": "Heat Transfer"
+              },
+              {
+                "prompt": "Why do coastal areas experience a sea breeze during daytime?",
+                "choices": ["Land warms faster than the sea", "Water warms faster than the land", "The sun shines only on water", "Sea currents push air inland"],
+                "answer": "Land warms faster than the sea",
+                "explanation": "Land heats quickly, causing warm air above it to rise and cool air from the sea to blow inward.",
+                "topic": "Convection in Nature"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "acids-bases-salts",
+          "title": "Acids, Bases, and Salts",
+          "topic": "Acids, Bases, and Salts",
+          "summary": "Properties of sour acids and bitter bases, natural indicators like litmus, and neutralisation in everyday life.",
+          "estimated_minutes": 20,
+          "position": 3,
+          "sections": [
+            {
+              "heading": "Characteristics of Acids and Bases",
+              "passage": "Substances that taste sour typically contain acids (lemon contains citric acid, vinegar contains acetic acid, curd contains lactic acid). Substances that taste bitter and feel soapy when rubbed are bases (baking soda, lime water, soap). Concentrated laboratory acids like hydrochloric acid and sulphuric acid are corrosive and must be handled with care."
+            },
+            {
+              "heading": "Indicators",
+              "passage": "Special substances called indicators display distinct colours in acidic and basic solutions. Litmus, extracted from lichens, turns red in acidic solutions and blue in basic solutions. Turmeric is another natural indicator that stays yellow in acids but turns reddish-brown in basic solutions (like soap water). Phenolphthalein turns pink in bases and stays colourless in acids."
+            },
+            {
+              "heading": "Neutralisation in Daily Life",
+              "passage": "When an acid reacts with a base, they neutralise each other to form salt and water while generating heat. This neutralisation is essential in daily life: antacid tablets (containing magnesium hydroxide) neutralise excess hydrochloric acid causing stomach acidity. Baking soda (a mild base) relieves painful ant stings which inject formic acid. Agricultural soil that is too acidic is treated with quicklime (calcium oxide)."
+            }
+          ],
+          "quiz": {
+            "title": "Acids and Bases Check",
+            "questions": [
+              {
+                "prompt": "What colour does blue litmus paper turn when dipped in lemon juice?",
+                "choices": ["Red", "Blue", "Green", "Yellow"],
+                "answer": "Red",
+                "explanation": "Acids turn blue litmus paper red, while bases turn red litmus paper blue.",
+                "topic": "Indicators"
+              },
+              {
+                "prompt": "Which acid is injected into the skin by an ant bite?",
+                "choices": ["Formic acid", "Citric acid", "Lactic acid", "Hydrochloric acid"],
+                "answer": "Formic acid",
+                "explanation": "Ant stings introduce formic acid, which can be neutralised with mild bases like baking soda or calamine.",
+                "topic": "Neutralisation"
+              },
+              {
+                "prompt": "The reaction between an acid and a base is called:",
+                "choices": ["Neutralisation", "Fermentation", "Photosynthesis", "Evaporation"],
+                "answer": "Neutralisation",
+                "explanation": "Neutralisation is the chemical reaction between an acid and base producing salt, water, and heat.",
+                "topic": "Neutralisation"
+              },
+              {
+                "prompt": "A curry stain on a white shirt turns reddish-brown when washed with soap because:",
+                "choices": ["Soap is basic and turmeric turns red in base", "Soap is acidic and turns yellow into red", "Curry reacts with water only", "Soap bleaches the fabric"],
+                "answer": "Soap is basic and turmeric turns red in base",
+                "explanation": "Turmeric is a natural indicator that turns reddish-brown in contact with basic solutions like soap.",
+                "topic": "Indicators"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "slug": "mathematics-class-7",
+      "lessons": [
+        {
+          "slug": "integers-class-7",
+          "title": "Integers and Operations",
+          "topic": "Integers",
+          "summary": "Rules for addition, subtraction, multiplication, and division of positive and negative integers.",
+          "estimated_minutes": 25,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Integers on the Number Line",
+              "passage": "Integers include all positive numbers, zero, and negative numbers (... -3, -2, -1, 0, 1, 2, 3 ...). On a horizontal number line, numbers to the right of zero are positive, and numbers to the left are negative. Moving right adds, while moving left subtracts. The integer zero is neither positive nor negative, but is greater than every negative integer."
+            },
+            {
+              "heading": "Addition and Subtraction of Integers",
+              "passage": "When adding two integers with the same sign, add their absolute values and keep the common sign: (-4) + (-5) = -9. When adding integers with opposite signs, subtract the smaller absolute value from the larger and take the sign of the larger: (-8) + 5 = -3. Subtraction is addition of the additive inverse: a - b = a + (-b)."
+            },
+            {
+              "heading": "Multiplication and Division Rules",
+              "passage": "Multiplying or dividing two integers with like signs always produces a positive result: (-4) × (-3) = 12, and (-15) ÷ (-3) = 5. Multiplying or dividing two integers with unlike signs produces a negative result: (-6) × 2 = -12, and 20 ÷ (-4) = -5. Any integer multiplied by zero equals zero, while dividing by zero is undefined."
+            }
+          ],
+          "quiz": {
+            "title": "Integers Operations Quiz",
+            "questions": [
+              {
+                "prompt": "What is (-7) + (-5)?",
+                "choices": ["-12", "12", "-2", "2"],
+                "answer": "-12",
+                "explanation": "Adding two negative numbers sums their numerical values and retains the negative sign.",
+                "topic": "Integer Addition"
+              },
+              {
+                "prompt": "What is (-6) × (-4)?",
+                "choices": ["24", "-24", "-10", "10"],
+                "answer": "24",
+                "explanation": "Multiplying two negative integers yields a positive product: negative × negative = positive.",
+                "topic": "Integer Multiplication"
+              },
+              {
+                "prompt": "Evaluate: 15 - (-8)",
+                "choices": ["23", "7", "-23", "-7"],
+                "answer": "23",
+                "explanation": "Subtracting a negative number is equivalent to adding its positive: 15 + 8 = 23.",
+                "topic": "Integer Subtraction"
+              },
+              {
+                "prompt": "What is (-45) ÷ 9?",
+                "choices": ["-5", "5", "-6", "6"],
+                "answer": "-5",
+                "explanation": "Dividing numbers with different signs gives a negative result: (-45) ÷ 9 = -5.",
+                "topic": "Integer Division"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "perimeter-and-area",
+          "title": "Perimeter and Area",
+          "topic": "Perimeter and Area",
+          "summary": "Calculating perimeter and area of rectangles, squares, parallelograms, triangles, and circles.",
+          "estimated_minutes": 25,
+          "position": 2,
+          "sections": [
+            {
+              "heading": "Rectangles and Squares",
+              "passage": "Perimeter is the continuous boundary line surrounding a closed geometric shape, measured in linear units (cm, m). For a rectangle with length l and breadth b, Perimeter = 2(l + b) and Area = l × b. For a square with side s, Perimeter = 4s and Area = s × s (or s²), measured in square units (cm², m²)."
+            },
+            {
+              "heading": "Parallelograms and Triangles",
+              "passage": "Any side of a parallelogram can be chosen as its base, and the corresponding height is the perpendicular distance between the base and opposite side. Area of a parallelogram = base × height. A triangle formed by drawing a diagonal across a parallelogram covers exactly half its area. Therefore, Area of a triangle = (1/2) × base × height."
+            },
+            {
+              "heading": "Circles: Circumference and Area",
+              "passage": "The perimeter of a circle is called its circumference. The ratio of circumference to diameter is constant across all circles, denoted by the Greek letter π (pi, approximately 22/7 or 3.14). Circumference = 2 × π × r (where r is radius). The area enclosed by a circle is calculated as Area = π × r²."
+            }
+          ],
+          "quiz": {
+            "title": "Perimeter and Area Quiz",
+            "questions": [
+              {
+                "prompt": "A triangle has base 8 cm and height 5 cm. What is its area?",
+                "choices": ["20 cm²", "40 cm²", "26 cm²", "13 cm²"],
+                "answer": "20 cm²",
+                "explanation": "Area of triangle = (1/2) × base × height = (1/2) × 8 × 5 = 20 cm².",
+                "topic": "Triangle Area"
+              },
+              {
+                "prompt": "What is the circumference of a circle with radius 7 cm? (Take π = 22/7)",
+                "choices": ["44 cm", "154 cm", "22 cm", "88 cm"],
+                "answer": "44 cm",
+                "explanation": "Circumference = 2 × π × r = 2 × (22/7) × 7 = 44 cm.",
+                "topic": "Circumference"
+              },
+              {
+                "prompt": "If a square field has perimeter 36 metres, what is the length of one side?",
+                "choices": ["9 m", "6 m", "18 m", "12 m"],
+                "answer": "9 m",
+                "explanation": "Perimeter of square = 4 × side, so side = 36 / 4 = 9 metres.",
+                "topic": "Square Perimeter"
+              },
+              {
+                "prompt": "A room floor is 6 m long and 4 m wide. What is the area of the floor?",
+                "choices": ["24 m²", "20 m²", "10 m²", "48 m²"],
+                "answer": "24 m²",
+                "explanation": "Area of rectangle = length × breadth = 6 × 4 = 24 m².",
+                "topic": "Rectangle Area"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Social Science",
+      "slug": "social-science-class-7",
+      "lessons": [
+        {
+          "slug": "our-environment",
+          "title": "Our Environment and Ecosystem",
+          "topic": "Our Environment",
+          "summary": "Exploring the physical spheres of the earth, ecosystems, and human-environment interactions.",
+          "estimated_minutes": 20,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Components of the Environment",
+              "passage": "Environment means everything that surrounds a living organism. It includes natural components (air, water, land, living things) and human-made components (buildings, roads, bridges, industries). The natural environment consists of biotic elements (living organisms like plants and animals) and abiotic elements (non-living elements like soil, minerals, sunlight, and air)."
+            },
+            {
+              "heading": "Domains of the Earth",
+              "passage": "The Earth has four interconnected domains: the Lithosphere is the solid outer crust made of rocks and soil; the Hydrosphere comprises all water bodies like oceans, lakes, and rivers; the Atmosphere is the thin blanket of air held by gravity that protects us from harmful solar rays; and the Biosphere is the narrow transition zone where land, water, and air interact to sustain life."
+            },
+            {
+              "heading": "Ecosystem and Human Impact",
+              "passage": "An ecosystem is a community formed by the interaction of living organisms with each other and their physical surroundings through energy and nutrient transfer. Ponds, forests, grasslands, and deserts are examples of natural ecosystems. Human activities like deforestation, pollution, and excessive groundwater extraction disturb ecological balance, highlighting the need for conservation."
+            }
+          ],
+          "quiz": {
+            "title": "Environment and Ecosystem Check",
+            "questions": [
+              {
+                "prompt": "Which domain of the Earth consists of the solid crust and rock layer?",
+                "choices": ["Lithosphere", "Hydrosphere", "Atmosphere", "Biosphere"],
+                "answer": "Lithosphere",
+                "explanation": "The lithosphere is the rigid solid outer sphere of Earth made of rocks, soil, and landforms.",
+                "topic": "Earth Domains"
+              },
+              {
+                "prompt": "Which of these is an abiotic component of our environment?",
+                "choices": ["Soil", "Trees", "Insects", "Birds"],
+                "answer": "Soil",
+                "explanation": "Abiotic components are non-living physical elements such as soil, air, water, and temperature.",
+                "topic": "Components of Environment"
+              },
+              {
+                "prompt": "The narrow zone where land, water, and air interact to support life is called the:",
+                "choices": ["Biosphere", "Troposphere", "Stratosphere", "Mesosphere"],
+                "answer": "Biosphere",
+                "explanation": "The biosphere is the biological zone where terrestrial, aquatic, and atmospheric life thrives.",
+                "topic": "Earth Domains"
+              },
+              {
+                "prompt": "When is World Environment Day celebrated globally every year?",
+                "choices": ["5th June", "22nd April", "15th August", "1st January"],
+                "answer": "5th June",
+                "explanation": "World Environment Day is observed on June 5th worldwide to foster environmental awareness.",
+                "topic": "Environmental Awareness"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

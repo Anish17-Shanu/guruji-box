@@ -1,0 +1,355 @@
+{
+  "class_level": 8,
+  "license": "CC BY 4.0",
+  "attribution": "Original GURUJI BOX educational content",
+  "subjects": [
+    {
+      "name": "Science",
+      "slug": "science-class-8",
+      "lessons": [
+        {
+          "slug": "crop-production",
+          "title": "Crop Production and Management",
+          "topic": "Crop Production",
+          "summary": "Agricultural practices: soil preparation, sowing, irrigation, manuring, harvesting, and safe storage of crops.",
+          "estimated_minutes": 25,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Kharif and Rabi Crops",
+              "passage": "When plants of the same kind are cultivated at one place on a large scale, they are called a crop. In India, crops are broadly categorised by season. Kharif crops are sown in the rainy season (June to September) and require substantial water; examples include paddy (rice), maize, soyabean, and cotton. Rabi crops are grown in the winter season (October to March); examples include wheat, gram, mustard, and peas."
+            },
+            {
+              "heading": "Preparation of Soil and Sowing",
+              "passage": "Soil preparation involves tilling or ploughing using iron or wooden ploughs and cultivators attached to tractors. Loosening the soil allows roots to penetrate deep and breathe easily, while bringing nutrient-rich soil to the top. Good quality, disease-free, high-yielding seeds are selected and planted at appropriate depth and spacing using seed drills to protect them from birds."
+            },
+            {
+              "heading": "Manure, Fertilisers, and Modern Irrigation",
+              "passage": "Continuous farming depletes soil nutrients. Manure is an organic substance formed by decomposing plant and animal waste, improving soil texture and water retention. Chemical fertilisers (such as urea, NPK) provide specific nutrients like nitrogen, phosphorus, and potassium. Modern irrigation methods conserve water: sprinkler systems mimic rain on uneven ground, and drip irrigation delivers water drop-by-drop near plant roots, ideal for dry regions."
+            }
+          ],
+          "quiz": {
+            "title": "Crop Production Check",
+            "questions": [
+              {
+                "prompt": "Which of the following is a Kharif crop?",
+                "choices": ["Paddy (Rice)", "Wheat", "Mustard", "Gram"],
+                "answer": "Paddy (Rice)",
+                "explanation": "Paddy is planted during the monsoon rainy season (June-September), making it a Kharif crop.",
+                "topic": "Crop Types"
+              },
+              {
+                "prompt": "Which modern irrigation technique delivers water drop-by-drop at the roots?",
+                "choices": ["Drip irrigation", "Sprinkler system", "Chain pump", "Moat"],
+                "answer": "Drip irrigation",
+                "explanation": "Drip irrigation saves up to 70% water by supplying drops directly to the base of roots.",
+                "topic": "Irrigation Methods"
+              },
+              {
+                "prompt": "Organic manure improves soil primarily by:",
+                "choices": ["Increasing humus and water-holding capacity", "Adding synthetic chemicals quickly", "Killing all soil earthworms", "Preventing root aeration"],
+                "answer": "Increasing humus and water-holding capacity",
+                "explanation": "Manure enriches soil organic matter, stimulates friendly soil microbes, and improves aeration.",
+                "topic": "Soil Health"
+              },
+              {
+                "prompt": "Which tool is commonly used with tractors for uniform seed sowing today?",
+                "choices": ["Seed drill", "Wooden sickle", "Hand trowel (Khurpi)", "Winnowing basket"],
+                "answer": "Seed drill",
+                "explanation": "A seed drill places seeds uniformly at equal distance and depth and covers them with soil.",
+                "topic": "Agricultural Implements"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "microorganisms",
+          "title": "Microorganisms: Friend and Foe",
+          "topic": "Microorganisms",
+          "summary": "Exploring microscopic life: beneficial uses in food and medicine, diseases, and preservation methods.",
+          "estimated_minutes": 25,
+          "position": 2,
+          "sections": [
+            {
+              "heading": "Major Groups of Microorganisms",
+              "passage": "Microorganisms are tiny living creatures too small to be seen with the unaided eye. They are classified into four major groups: Bacteria, Fungi, Protozoa, and Algae. Viruses are microscopic agents that reproduce solely inside the living cells of host organisms (plants, animals, or bacteria). Microbes live in boiling water, arctic ice, deserts, and inside our digestive tracts."
+            },
+            {
+              "heading": "Friendly Microorganisms",
+              "passage": "Microbes play vital roles in daily life and industry. Lactobacillus bacteria promote the formation of curd from milk. Yeast reproduces rapidly and generates carbon dioxide gas, making bread dough and idli batter rise. Antibiotics like penicillin (discovered by Alexander Fleming) are manufactured from fungi and bacteria to cure bacterial infections. Vaccines introduce weakened microbes so our immune system produces protective antibodies."
+            },
+            {
+              "heading": "Harmful Microbes and Food Preservation",
+              "passage": "Disease-causing microbes are termed pathogens. They spread through air, water, infected food, or insect vectors (such as female Anopheles mosquitoes carrying malaria parasites). Food spoilage caused by microbial growth is prevented using salt, sugar, edible oils, vinegar, heating, or cold storage. Pasteurisation (heating milk to 70°C for 15-30 seconds, then chilling quickly) destroys harmful bacteria without boiling."
+            }
+          ],
+          "quiz": {
+            "title": "Microorganisms Check",
+            "questions": [
+              {
+                "prompt": "Which bacterium converts milk into curd?",
+                "choices": ["Lactobacillus", "Rhizobium", "Salmonella", "Yeast"],
+                "answer": "Lactobacillus",
+                "explanation": "Lactobacillus multiplies in warm milk, coagulates milk protein, and produces lactic acid curd.",
+                "topic": "Beneficial Microbes"
+              },
+              {
+                "prompt": "Who discovered the first antibiotic, Penicillin?",
+                "choices": ["Alexander Fleming", "Louis Pasteur", "Edward Jenner", "Robert Koch"],
+                "answer": "Alexander Fleming",
+                "explanation": "In 1928, Alexander Fleming discovered penicillin produced by the fungus Penicillium notatum.",
+                "topic": "Medical History"
+              },
+              {
+                "prompt": "Which mosquito acts as the carrier for the malaria parasite?",
+                "choices": ["Female Anopheles mosquito", "Aedes mosquito", "Housefly", "Culex mosquito"],
+                "answer": "Female Anopheles mosquito",
+                "explanation": "Female Anopheles mosquitoes transmit the protozoan Plasmodium which causes malaria.",
+                "topic": "Pathogens and Vectors"
+              },
+              {
+                "prompt": "What gas causes bread dough to rise when yeast is added?",
+                "choices": ["Carbon dioxide", "Oxygen", "Nitrogen", "Methane"],
+                "answer": "Carbon dioxide",
+                "explanation": "Yeast ferments sugars and releases carbon dioxide bubbles that expand inside the dough.",
+                "topic": "Fermentation"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "force-and-pressure",
+          "title": "Force and Pressure",
+          "topic": "Force and Pressure",
+          "summary": "Concepts of force, contact and non-contact forces, pressure calculation, and atmospheric pressure.",
+          "estimated_minutes": 25,
+          "position": 3,
+          "sections": [
+            {
+              "heading": "What is Force?",
+              "passage": "A push or pull exerted on an object is defined as a force. Forces have both magnitude and direction, measured in Newtons (N). A force can set a stationary object into motion, change the speed of a moving object, alter the direction of motion, or change the shape of an object. When two forces act in the same direction, they add together; when they act in opposite directions, the net force is their difference."
+            },
+            {
+              "heading": "Contact and Non-contact Forces",
+              "passage": "Contact forces require physical interaction with the object. Muscular force (lifting a bucket, pedalling a bicycle) and friction (the force opposing motion between two surfaces in contact) are contact forces. Non-contact forces act from a distance without touching: magnetic force (magnets attracting iron pins), electrostatic force (a rubbed plastic comb attracting bits of paper), and gravitational force (the earth pulling objects toward its centre)."
+            },
+            {
+              "heading": "Pressure and Atmospheric Pressure",
+              "passage": "Pressure is defined as the force acting per unit area: Pressure = Force / Area. If the force is applied over a smaller contact area, the resulting pressure is much greater. This is why cutting knives have sharp edges and school bag straps are made broad to reduce shoulder pressure. Atmospheric pressure is the immense weight of the column of air pressing down upon us, balanced by internal fluids in our bodies."
+            }
+          ],
+          "quiz": {
+            "title": "Force and Pressure Quiz",
+            "questions": [
+              {
+                "prompt": "What is the formula to calculate pressure?",
+                "choices": ["Force / Area", "Force × Area", "Area / Force", "Force × Velocity"],
+                "answer": "Force / Area",
+                "explanation": "Pressure is force perpendicular to a surface divided by the surface area (P = F / A).",
+                "topic": "Pressure"
+              },
+              {
+                "prompt": "Which of the following is a non-contact force?",
+                "choices": ["Gravitational force", "Frictional force", "Muscular force", "Tension force"],
+                "answer": "Gravitational force",
+                "explanation": "Gravity acts between masses without needing direct physical contact.",
+                "topic": "Types of Forces"
+              },
+              {
+                "prompt": "Why do heavy bags and backpacks have wide shoulder straps?",
+                "choices": ["Larger area reduces pressure on shoulders", "Smaller area increases strength", "Wide straps make the bag heavier", "Wide straps look decorative"],
+                "answer": "Larger area reduces pressure on shoulders",
+                "explanation": "Since Pressure = Force / Area, increasing the strap area decreases the pressure exerted on the shoulders.",
+                "topic": "Pressure Applications"
+              },
+              {
+                "prompt": "What opposes the relative motion between two surfaces touching each other?",
+                "choices": ["Friction", "Gravity", "Magnetism", "Atmosphere"],
+                "answer": "Friction",
+                "explanation": "Frictional force acts tangentially between contact surfaces to resist relative movement.",
+                "topic": "Friction"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "slug": "mathematics-class-8",
+      "lessons": [
+        {
+          "slug": "linear-equations-class-8",
+          "title": "Linear Equations in One Variable",
+          "topic": "Linear Equations",
+          "summary": "Forming algebraic equations, solving by transposition, and applying equations to real-world word problems.",
+          "estimated_minutes": 25,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Algebraic Equations",
+              "passage": "An algebraic equation is an equality involving variables and numbers. In a linear equation in one variable, the highest power of the variable is exactly 1 (e.g., 2x + 5 = 15). The expression to the left of the '=' sign is the Left Hand Side (LHS) and the expression to the right is the Right Hand Side (RHS). A value of the variable that makes LHS equal to RHS is called the solution or root."
+            },
+            {
+              "heading": "Solving by Transposition",
+              "passage": "To solve an equation, we isolate the variable on one side. Terms can be transposed from one side to the other by inverting their operation: addition becomes subtraction, subtraction becomes addition, multiplication becomes division, and division becomes multiplication. For example, in 3x - 7 = 14: transpose -7 to get 3x = 14 + 7 = 21, then divide by 3 to get x = 7."
+            },
+            {
+              "heading": "Applications and Word Problems",
+              "passage": "Linear equations solve real-world puzzles involving ages, currency notes, perimeter, and speed. Step 1: identify the unknown quantity and designate it as a variable (say, x). Step 2: translate the word statements into mathematical relations. Step 3: solve for x and verify the answer by substituting it back into the original problem context."
+            }
+          ],
+          "quiz": {
+            "title": "Linear Equations Check",
+            "questions": [
+              {
+                "prompt": "Solve for x: 3x + 9 = 24",
+                "choices": ["x = 5", "x = 11", "x = 3", "x = 15"],
+                "answer": "x = 5",
+                "explanation": "3x = 24 - 9 = 15, so x = 15 / 3 = 5.",
+                "topic": "Solving Linear Equations"
+              },
+              {
+                "prompt": "If 5x - 8 = 2x + 7, what is the value of x?",
+                "choices": ["5", "3", "-5", "1"],
+                "answer": "5",
+                "explanation": "Transpose terms: 5x - 2x = 7 + 8 -> 3x = 15 -> x = 5.",
+                "topic": "Variables on Both Sides"
+              },
+              {
+                "prompt": "The sum of three consecutive integers is 36. What is the smallest integer?",
+                "choices": ["11", "12", "13", "10"],
+                "answer": "11",
+                "explanation": "Let integers be x, x+1, x+2. 3x + 3 = 36 -> 3x = 33 -> x = 11.",
+                "topic": "Word Problems"
+              },
+              {
+                "prompt": "In a linear equation, what is the highest power of the variable?",
+                "choices": ["1", "2", "0", "Any number"],
+                "answer": "1",
+                "explanation": "Linear equations have a degree of 1, meaning the variable's highest exponent is 1.",
+                "topic": "Equation Concepts"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "squares-and-roots",
+          "title": "Squares and Square Roots",
+          "topic": "Squares and Roots",
+          "summary": "Properties of perfect square numbers, patterns, Pythagorean triplets, and finding square roots.",
+          "estimated_minutes": 25,
+          "position": 2,
+          "sections": [
+            {
+              "heading": "Square Numbers and Patterns",
+              "passage": "When a number is multiplied by itself, the product is called its square (e.g., 5 × 5 = 25). Numbers like 1, 4, 9, 16, 25, 36, 49, 64, 81, and 100 are perfect squares. Perfect squares can only end with digits 0, 1, 4, 5, 6, or 9 at the units place; numbers ending with 2, 3, 7, or 8 are never perfect squares. Furthermore, squares of even numbers are always even, and squares of odd numbers are always odd."
+            },
+            {
+              "heading": "Pythagorean Triplets",
+              "passage": "A collection of three positive integers (a, b, c) that satisfy the relation a² + b² = c² is termed a Pythagorean triplet. For instance, (3, 4, 5) is a triplet because 3² + 4² = 9 + 16 = 25 = 5². For any natural number m > 1, the three numbers (2m, m² - 1, m² + 1) always form a Pythagorean triplet."
+            },
+            {
+              "heading": "Finding Square Roots",
+              "passage": "The square root of a number is the value that, when multiplied by itself, gives the original number, denoted by the radical symbol √ (e.g., √64 = 8). Square roots are commonly found by prime factorisation: write the number as pairs of identical prime factors, then select one factor from each pair (e.g., 144 = 2×2 × 2×2 × 3×3, so √144 = 2 × 2 × 3 = 12)."
+            }
+          ],
+          "quiz": {
+            "title": "Squares and Roots Quiz",
+            "questions": [
+              {
+                "prompt": "What is the square root of 196?",
+                "choices": ["14", "16", "12", "18"],
+                "answer": "14",
+                "explanation": "14 × 14 = 196, so √196 = 14.",
+                "topic": "Square Roots"
+              },
+              {
+                "prompt": "Which of these cannot be the units digit of a perfect square?",
+                "choices": ["7", "1", "4", "9"],
+                "answer": "7",
+                "explanation": "No square of an integer ends in 2, 3, 7, or 8.",
+                "topic": "Square Properties"
+              },
+              {
+                "prompt": "Which set forms a Pythagorean triplet?",
+                "choices": ["(6, 8, 10)", "(5, 7, 9)", "(4, 5, 6)", "(2, 3, 4)"],
+                "answer": "(6, 8, 10)",
+                "explanation": "6² + 8² = 36 + 64 = 100 = 10², so (6, 8, 10) is a Pythagorean triplet.",
+                "topic": "Pythagorean Triplets"
+              },
+              {
+                "prompt": "What is the square of 15?",
+                "choices": ["225", "125", "250", "30"],
+                "answer": "225",
+                "explanation": "15 × 15 = 225.",
+                "topic": "Square Numbers"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Social Science",
+      "slug": "social-science-class-8",
+      "lessons": [
+        {
+          "slug": "indian-constitution",
+          "title": "The Indian Constitution and Democracy",
+          "topic": "The Indian Constitution",
+          "summary": "Understanding why nations need constitutions, fundamental rights, federalism, and the rule of law.",
+          "estimated_minutes": 20,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Why Does a Country Need a Constitution?",
+              "passage": "A constitution lays down the foundational ideals and principles upon which a society is governed. It defines the nature of the country's political system, protects citizens from arbitrary misuse of power by authorities, and ensures that majority groups do not dominate or suppress minorities. The Indian Constitution was drafted by the Constituent Assembly under Dr. B.R. Ambedkar and came into effect on 26 January 1950."
+            },
+            {
+              "heading": "Key Pillars: Federalism and Separation of Powers",
+              "passage": "The Indian Constitution has distinct foundational pillars. Federalism refers to the existence of more than one level of government (Central, State, and Panchayati Raj). Separation of Powers divides governance into three independent organs: the Legislature (which makes laws), the Executive (which implements laws and runs the administration), and the Judiciary (the system of courts that interprets laws and delivers justice)."
+            },
+            {
+              "heading": "Fundamental Rights and Secularism",
+              "passage": "Part III of the Constitution guarantees Fundamental Rights to all citizens: Right to Equality, Right to Freedom, Right against Exploitation, Right to Freedom of Religion, Cultural and Educational Rights, and Right to Constitutional Remedies. Secularism means the State does not officially promote or discriminate against any specific religion, treating all faiths equally under law."
+            }
+          ],
+          "quiz": {
+            "title": "Indian Constitution Quiz",
+            "questions": [
+              {
+                "prompt": "Who is acknowledged as the Father of the Indian Constitution?",
+                "choices": ["Dr. B.R. Ambedkar", "Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel"],
+                "answer": "Dr. B.R. Ambedkar",
+                "explanation": "Dr. Bhimrao Ramji Ambedkar chaired the Drafting Committee of the Constituent Assembly.",
+                "topic": "Constitution History"
+              },
+              {
+                "prompt": "The organ of government responsible for making laws is the:",
+                "choices": ["Legislature", "Executive", "Judiciary", "Bureaucracy"],
+                "answer": "Legislature",
+                "explanation": "The Legislature (Parliament and State Assemblies) debates, drafts, and enacts laws.",
+                "topic": "Organs of State"
+              },
+              {
+                "prompt": "What does secularism mean in the Indian context?",
+                "choices": ["The state treats all religions equally without favoring any", "The state enforces a national religion", "Religion is banned in public life", "Only major religions are recognised"],
+                "answer": "The state treats all religions equally without favoring any",
+                "explanation": "Under Indian secularism, the state maintains principled distance and neutrality towards all religions.",
+                "topic": "Secularism"
+              },
+              {
+                "prompt": "On which date did the Constitution of India officially come into force?",
+                "choices": ["26 January 1950", "15 August 1947", "26 November 1949", "2 October 1952"],
+                "answer": "26 January 1950",
+                "explanation": "The Constitution took effect on 26 January 1950, celebrated nationwide as Republic Day.",
+                "topic": "Constitution History"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

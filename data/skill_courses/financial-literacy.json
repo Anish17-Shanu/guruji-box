@@ -1,0 +1,42 @@
+{
+  "courses": [
+    {
+      "slug": "financial-literacy",
+      "title": "Everyday Banking and Financial Literacy",
+      "description": "Essential skills for managing money, bank accounts, digital UPI payments, and protecting against scams.",
+      "position": 2,
+      "lessons": [
+        {
+          "slug": "bank-accounts-and-kyc",
+          "title": "Understanding Bank Accounts and KYC",
+          "body": "A savings bank account keeps your money secure while earning modest interest. To open an account, banks require KYC (Know Your Customer) documents: proof of identity (Aadhaar or Voter ID) and proof of address. Jan Dhan accounts offer zero-minimum-balance facilities and a free RuPay debit card with built-in accident insurance for rural and unbanked families."
+        },
+        {
+          "slug": "atm-cards-and-safety",
+          "title": "Using ATMs and Debit Cards Safely",
+          "body": "Your debit card links directly to your bank account. When using an ATM: cover the keypad with your hand while typing your 4-digit PIN, never write the PIN on the back of the card, and never ask strangers to withdraw cash on your behalf. If an ATM machine deducts money without dispensing cash, take the printed slip and notify your bank branch within 24 hours."
+        },
+        {
+          "slug": "upi-and-qr-codes",
+          "title": "Safe UPI Payments and QR Codes",
+          "body": "Unified Payments Interface (UPI) lets you send and receive money directly between bank accounts instantly using apps like BHIM, Google Pay, or PhonePe. Remember the golden rule of UPI: you enter your UPI PIN ONLY when SENDING money, never when receiving money. Scanning a QR code or accepting a payment request should NEVER require you to type your secret PIN."
+        },
+        {
+          "slug": "budgeting-and-savings",
+          "title": "Household Budgeting and Emergency Funds",
+          "body": "A practical budget follows the 50-30-20 framework: allocate roughly 50% of income to essentials (food, rent, school fees, utilities), 30% to discretionary needs, and at least 20% to emergency savings. Keep emergency savings equivalent to 3 to 6 months of expenses in a liquid bank account rather than in risky schemes or with local informal moneylenders who charge exorbitant interest."
+        },
+        {
+          "slug": "govt-welfare-schemes",
+          "title": "Government Insurance and Pension Schemes",
+          "body": "Affordable micro-insurance schemes provide vital safety nets for families. Pradhan Mantri Suraksha Bima Yojana (PMSBY) provides 2 lakh rupee accidental death coverage for just ₹20 per year. Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) offers 2 lakh rupee life cover for ₹436 annually. Atal Pension Yojana (APY) guarantees a monthly pension of ₹1,000 to ₹5,000 after age 60."
+        },
+        {
+          "slug": "recognising-financial-scams",
+          "title": "Spotting Financial Scams and Fraud Calls",
+          "body": "Fraudsters frequently pose as bank managers, electricity board staff, or lottery agents demanding immediate action. Never share your OTP (One Time Password), card CVV, or bank password over phone or SMS. Bank officials never call asking for your PIN or password. If defrauded, immediately report the transaction to your bank and dial the National Cyber Crime Helpline at 1930."
+        }
+      ]
+    }
+  ]
+}

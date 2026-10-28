@@ -1,0 +1,129 @@
+{
+  "class_level": 6,
+  "license": "CC BY 4.0",
+  "attribution": "Original GURUJI BOX educational content",
+  "subjects": [
+    {
+      "name": "Social Science",
+      "slug": "social-science-class-6",
+      "lessons": [
+        {
+          "slug": "early-civilisations",
+          "title": "The Earliest Cities and Harappa",
+          "topic": "Early Civilisations",
+          "summary": "Discovering Harappa, Mohenjo-Daro, planned drainage, the Great Bath, and Bronze Age trade.",
+          "estimated_minutes": 20,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Discovery of the Indus Cities",
+              "passage": "Nearly 4,700 years ago, some of the earliest planned cities in the Indian subcontinent developed along the Indus River valley. The first city excavated by archaeologists in the 1920s was Harappa in Punjab (now in Pakistan), followed by Mohenjo-Daro in Sindh. Because Harappa was found first, this ancient urban culture is known as the Harappan or Indus Valley Civilisation."
+            },
+            {
+              "heading": "Town Planning and the Great Bath",
+              "passage": "Harappan cities were divided into two main parts: a higher west part called the Citadel, and a larger lower town in the east where common citizens lived. Buildings were constructed using durable, interlocking baked bricks. In Mohenjo-Daro, a special tank called the Great Bath was built lined with bricks, coated with plaster, and sealed watertight with a layer of natural tar (bitumen), likely used for ritual bathing."
+            },
+            {
+              "heading": "Drainage, Crafts, and Seals",
+              "passage": "Harappan cities featured remarkably advanced sanitary systems. Drains along streets were laid in straight lines, covered with inspection stone slabs, and connected to household toilets and bathing areas. Harappan artisans made pottery with black designs, terracotta toys, beads from carnelian stones, copper tools, and rectangular soapstone seals carved with animal figures and undeciphered script."
+            }
+          ],
+          "quiz": {
+            "title": "Harappan Civilisation Check",
+            "questions": [
+              {
+                "prompt": "Which was the first excavated city of the Indus Valley Civilisation?",
+                "choices": ["Harappa", "Mohenjo-Daro", "Lothal", "Kalibangan"],
+                "answer": "Harappa",
+                "explanation": "Harappa was the first ancient city excavated in this civilization, giving it the name Harappan Civilisation.",
+                "topic": "Indus Valley"
+              },
+              {
+                "prompt": "In Mohenjo-Daro, the Great Bath was made watertight using:",
+                "choices": ["Natural tar (bitumen)", "Concrete", "Iron sheets", "Wax"],
+                "answer": "Natural tar (bitumen)",
+                "explanation": "Baked bricks were plastered and sealed with natural tar (bitumen) to prevent water leakage.",
+                "topic": "Town Planning"
+              },
+              {
+                "prompt": "The elevated western part of a Harappan city is called the:",
+                "choices": ["Citadel", "Lower town", "Granary", "Harbour"],
+                "answer": "Citadel",
+                "explanation": "The citadel was the higher, fortified western section holding public buildings and storehouses.",
+                "topic": "Town Planning"
+              },
+              {
+                "prompt": "What material was used to make rectangular Harappan seals?",
+                "choices": ["Steatite (Soapstone)", "Wood", "Glass", "Plastic"],
+                "answer": "Steatite (Soapstone)",
+                "explanation": "Harappan seals were intricately carved from soft soapstone (steatite) and pressed onto clay goods.",
+                "topic": "Crafts and Trade"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "English",
+      "slug": "english-class-6",
+      "lessons": [
+        {
+          "slug": "parts-of-speech-basics",
+          "title": "Nouns, Verbs, and Adjectives",
+          "topic": "Parts of Speech",
+          "summary": "Building clear English sentences using naming words, action words, and describing words.",
+          "estimated_minutes": 20,
+          "position": 1,
+          "sections": [
+            {
+              "heading": "Nouns: Naming Words",
+              "passage": "A noun is a word that names a person, place, animal, thing, or concept. Common nouns name general items (e.g., river, student, tree, village), whereas proper nouns name specific entities and always begin with a capital letter (e.g., Ganga, Priya, Delhi, India). Abstract nouns name feelings and ideas that cannot be touched (e.g., courage, honesty, kindness)."
+            },
+            {
+              "heading": "Verbs: Action Words and Helping Verbs",
+              "passage": "A verb expresses an action, state, or occurrence in a sentence. Action verbs show what someone does (e.g., runs, sings, writes, reads). Helping verbs (auxiliary verbs) assist main verbs to indicate tense, certainty, or time (e.g., is, are, was, were, has, have, will). Every complete English sentence must have at least one verb."
+            },
+            {
+              "heading": "Adjectives: Describing Words",
+              "passage": "An adjective modifies or describes a noun or pronoun by giving details about its size, colour, number, quality, or condition. In the phrase 'three ripe yellow mangoes', the words 'three', 'ripe', and 'yellow' are all adjectives describing the noun 'mangoes'. Adjectives make written and spoken communication precise and vivid."
+            }
+          ],
+          "quiz": {
+            "title": "Parts of Speech Quiz",
+            "questions": [
+              {
+                "prompt": "In the sentence 'The brave girl climbed the tall tree', which word is a verb?",
+                "choices": ["climbed", "brave", "tall", "girl"],
+                "answer": "climbed",
+                "explanation": "'Climbed' is an action verb describing what the girl did.",
+                "topic": "Verbs"
+              },
+              {
+                "prompt": "Which of the following is a proper noun?",
+                "choices": ["Himalayas", "mountain", "country", "city"],
+                "answer": "Himalayas",
+                "explanation": "'Himalayas' is the specific name of a mountain range and begins with a capital letter.",
+                "topic": "Nouns"
+              },
+              {
+                "prompt": "Identify the adjective in: 'She drank cold milk.'",
+                "choices": ["cold", "drank", "milk", "she"],
+                "answer": "cold",
+                "explanation": "'Cold' describes the condition and temperature of the noun 'milk'.",
+                "topic": "Adjectives"
+              },
+              {
+                "prompt": "Words that describe feelings or ideas like 'kindness' and 'honesty' are:",
+                "choices": ["Abstract nouns", "Action verbs", "Proper nouns", "Prepositions"],
+                "answer": "Abstract nouns",
+                "explanation": "Abstract nouns represent intangible qualities, concepts, or emotions.",
+                "topic": "Nouns"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

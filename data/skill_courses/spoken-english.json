@@ -1,0 +1,42 @@
+{
+  "courses": [
+    {
+      "slug": "spoken-english",
+      "title": "Spoken English for Everyday Life",
+      "description": "Practical conversational English for public transport, hospital visits, banking, customer support, and simple job interviews.",
+      "position": 4,
+      "lessons": [
+        {
+          "slug": "greetings-and-introductions",
+          "title": "Greetings and Polite Introductions",
+          "body": "Start conversations politely based on the time of day: 'Good morning' (before 12 PM), 'Good afternoon' (12 PM - 5 PM), and 'Good evening' (after 5 PM). When meeting someone new: 'Hello, my name is Rahul. Nice to meet you.' Express gratitude and politeness using three golden words: 'Please', 'Thank you very much', and 'Excuse me'."
+        },
+        {
+          "slug": "directions-and-transit",
+          "title": "Asking for Directions and Public Transport",
+          "body": "Learn clear phrases for transit: 'Excuse me, which bus goes to the railway station?', 'How much is the fare to the civil hospital?', 'Could you please tell me when the next stop arrives?', and 'Is this seat vacant?'. If you are lost: 'Could you please point me in the direction of the main market?'"
+        },
+        {
+          "slug": "clinic-and-pharmacy",
+          "title": "Speaking at the Clinic and Pharmacy",
+          "body": "Describe symptoms simply to medical staff: 'I have had a high fever and headache since yesterday', 'My stomach hurts after eating', or 'I am feeling dizzy'. At the chemist shop or pharmacy: 'Do you have this medicine on the prescription?', 'How many times a day should I take these tablets?', and 'Should I take this before or after meals?'"
+        },
+        {
+          "slug": "bank-and-post-office",
+          "title": "Conversations at the Bank and Post Office",
+          "body": "Common phrases at administrative counters: 'I would like to deposit this cash into my account', 'Could you please help me fill this withdrawal slip?', 'I need to update my mobile number in my passbook', 'Where is the speed post counter?', and 'How many days will it take for this parcel to reach Patna?'"
+        },
+        {
+          "slug": "phone-calls-and-support",
+          "title": "Telephone Etiquette and Customer Service",
+          "body": "When answering an unfamiliar or official phone call: 'Hello, this is Suresh speaking. How may I help you?'. If the line is unclear: 'I am sorry, your voice is breaking up. Could you please repeat that?'. When contacting customer support for gas booking, electricity, or internet issues: 'My consumer number is 12345. I want to register a service complaint.'"
+        },
+        {
+          "slug": "job-interviews-basics",
+          "title": "Basic Job Interviews and Self-Introduction",
+          "body": "When an interviewer says 'Tell me about yourself', follow a simple 3-part structure: (1) Your name and background: 'My name is Pooja and I live in Alwar'; (2) Your education or experience: 'I completed my Class 12 and have 2 years of experience in data entry and accounting'; (3) Your goal: 'I am punctual, eager to learn new software, and looking forward to contributing to your team.'"
+        }
+      ]
+    }
+  ]
+}

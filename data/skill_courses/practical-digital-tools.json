@@ -1,0 +1,42 @@
+{
+  "courses": [
+    {
+      "slug": "practical-digital-tools",
+      "title": "Smartphone Tools & Citizen Services",
+      "description": "How to navigate digital citizen portals, store official documents on DigiLocker, book healthcare, and access government welfare.",
+      "position": 3,
+      "lessons": [
+        {
+          "slug": "digilocker-basics",
+          "title": "Using DigiLocker for Official Documents",
+          "body": "DigiLocker is an official Indian government cloud repository linked to your Aadhaar number. Documents stored in DigiLocker—including driving licences, vehicle RC, Class 10/12 marksheets, and ration cards—are legally equivalent to physical original documents under Rule 9A of the IT Rules. You can present your digital licence directly to traffic police on your smartphone."
+        },
+        {
+          "slug": "maps-and-navigation",
+          "title": "Navigation and Finding Local Services",
+          "body": "Mapping apps help you find routes, bus timings, ATMs, and nearby hospitals. Learn how to search with specific terms ('nearest primary health centre', 'petrol pump'), check estimated travel times by foot, bicycle, or bus, and share your live journey location with trusted family members when travelling after dark for personal safety."
+        },
+        {
+          "slug": "healthcare-esanjeevani",
+          "title": "Teleconsultation and Ayushman Bharat",
+          "body": "You can consult qualified government doctors remotely from home through eSanjeevani without travelling to district hospitals. You can also generate your Ayushman Bharat Health Account (ABHA) card to store diagnostic reports, prescriptions, and medical histories securely online, enabling doctors anywhere in India to provide informed emergency treatment."
+        },
+        {
+          "slug": "citizen-certificates",
+          "title": "Online Caste, Income, and Land Records",
+          "body": "State citizen portals (such as e-District or Bhulekh/Bhoomi) allow citizens to apply for caste certificates, domicile certificates, birth certificates, and land title records (Khasra/Khatauni) without paying middleman fees. Learn how to check application status, download digitally signed PDF certificates, and verify QR codes on official documents."
+        },
+        {
+          "slug": "irctc-ticket-booking",
+          "title": "Booking Train and Bus Tickets Online",
+          "body": "Learn how to use the official IRCTC app to search trains between stations, check seat availability (Sleeper, 3AC, General), check PNR status, and pay safely without standing in ticket counter queues. Always verify cancellation and refund terms before booking, and carry an original government ID proof during the train journey."
+        },
+        {
+          "slug": "rural-job-portals",
+          "title": "Accessing e-NAM and Rural Employment",
+          "body": "Farmers and rural entrepreneurs can check transparent crop prices across agricultural mandis across India on the e-NAM (National Agriculture Market) portal. Job seekers can also access the National Career Service (NCS) portal to register for skill training workshops, vocational apprenticeships, and verified government jobs."
+        }
+      ]
+    }
+  ]
+}
