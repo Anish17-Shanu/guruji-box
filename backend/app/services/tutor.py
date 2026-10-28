@@ -20,7 +20,7 @@ from ..models import Lesson, LessonSection, TutorMessage, TutorSession, User
 
 logger = logging.getLogger("guruji.tutor")
 settings = get_settings()
-TOKEN_RE = re.compile(r"[a-z0-9]+")
+TOKEN_RE = re.compile(r"[a-z0-9\u0900-\u097F]+", re.IGNORECASE)
 STOPWORDS = {
     "a",
     "about",
@@ -61,6 +61,41 @@ STOPWORDS = {
     "why",
     "with",
     "you",
+    "का",
+    "के",
+    "की",
+    "को",
+    "में",
+    "से",
+    "पर",
+    "और",
+    "है",
+    "हैं",
+    "था",
+    "थी",
+    "थे",
+    "क्या",
+    "कैसे",
+    "क्यों",
+    "कब",
+    "कहाँ",
+    "कौन",
+    "किसे",
+    "किस",
+    "यह",
+    "वह",
+    "ये",
+    "वे",
+    "तो",
+    "भी",
+    "ही",
+    "ने",
+    "एक",
+    "होता",
+    "होती",
+    "होते",
+    "होना",
+    "करना",
 }
 
 
